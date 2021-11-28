@@ -7,7 +7,7 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="../source/img/main-logo-mobile.svg" width="33.32" height="37.61" alt="">
+        <img src="../source/img/main-logo-mobile.svg" width="33" alt="">
       </a>
       <a class="page-header__text-logo">
         <img src="../source/img/logo-text.svg" width="101" height="18" alt="Питание для котов Кэт Энерджи.">
@@ -38,73 +38,81 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="form-content">
-        <h1>Подбор программы</h1>
-        <p class="form__description">Заполните анкету, и мы подберем<br>
-            программу питания для вашего кота</p>
-        <form class="main-content__form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="main-content__form--data">
-            <legend class="visually-hidden">Данные питомца</legend>
-            <label class="form__label form-required" for="cat-name">ИМЯ:</label>
-            <input class="field" type="text" id="cat-name" name="cat-name" placeholder="барсик" required>
-            <label class="form__label form-required" for="cat-weight">Вес (кг):</label>
-            <input class="field" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
-            <label class="form__label" for="cat-age">Возраст (лет):</label>
-            <input class="field" type="number" id="cat-age" name="cat-age" placeholder="7">
-          </fieldset>
-          <fieldset class="form__goal">
-            <legend class="visually-hidden">Цель диеты</legend>
-            <ul class="form__goal--list">
-              <li class="form__goal--item">
-                <input class="control__input" type="radio" id="goal-slimming" name="radio-goal" value="slimming" checked>
-                <label class="control" for="goal-slimming">похудение</label>
-              </li>
-              <li class="form__goal--item">
-                <input class="control__input" type="radio" id="goal-weight-gain" name="radio-goal" value="weight-gain">
-                <label class="control" for="goal-weight-gain">Набор массы</label>
-              </li>
-              <li class="form__goal--item">
-                <input class="control__input" type="radio" id="goal-advice" name="radio-goal" value="advice">
-                <label class="control" for="goal-advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="main-content__form--owner-contacts">
-            <legend class="form-title">Контактные данные
-              (владельца кота)</legend>
-            <label class="form__label form-required" for="owner-email">E-mail:</label>
-            <input class="field" type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
-            <label class="form__label form-required" for="owner-phone">Телефон:</label>
-            <input class="field" type="text" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
-          </fieldset>
-          <fieldset class="main-content__form--comment">
-            <legend class="form-title">Комментарий</legend>
-            <input class="field" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
-          </fieldset>
-          <fieldset class="main-content__form--extra">
-            <legend class="form-title">Дополнительно</legend>
-            <ul class="form__extra--list">
-              <li class="form__extra--item">
-                <input class="control__input" type="checkbox" id="extra-sweetener" name="sweetener" checked>
-                <label class="control" for="extra-sweetener">сахарозаменитель</label>
-              </li>
-              <li class="form__extra--item">
-                <input class="control__input" type="checkbox" id="extra-water" name="water">
-                <label class="control" for="extra-water">питьевая вода</label>
-              </li>
-              <li class="form__extra--item">
-                <input class="control__input" type="checkbox" id="extra-milk" name="milk">
-                <label class="control" for="extra-milk">молоко</label>
-              </li>
-              <li class="form__extra--item">
-                <input class="control__input" type="checkbox" id="extra-vitamins" name="vitamins">
-                <label class="control" for="extra-vitamins">витамины</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button" type="submit">отправить заявку</button>
-        </form>
-        <small class="main-content__legend">* — Обязательные поля</small>
+      <section class="program-selection">
+        <div class="program-selection__wrapper">
+          <h1 class="program-selection__title">Подбор программы</h1>
+          <p class="program-selection__description">Заполните анкету, и мы подберем<br>
+              программу питания для вашего кота</p>
+          <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="form">
+              <legend class="visually-hidden">Данные питомца</legend>
+              <label class="form__label form__label--required" for="cat-name">ИМЯ:</label>
+              <input class="form__field" type="text" id="cat-name" name="cat-name" placeholder="барсик" required>
+
+              <label class="form__label form__label--required" for="cat-weight">Вес (кг):</label>
+              <input class="form__field" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
+
+              <label class="form__label" for="cat-age">Возраст (лет):</label>
+              <input class="form__field" type="number" id="cat-age" name="cat-age" placeholder="7">
+            </fieldset>
+
+            <fieldset class="form form__goal">
+              <legend class="visually-hidden">Цель диеты</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="control__input" type="radio" id="goal-slimming" name="radio-goal" value="slimming" checked>
+                  <label class="control" for="goal-slimming">похудение</label>
+                </li>
+                <li class="form__item">
+                  <input class="control__input" type="radio" id="goal-weight-gain" name="radio-goal" value="weight-gain">
+                  <label class="control" for="goal-weight-gain">Набор массы</label>
+                </li>
+                <li class="form__item">
+                  <input class="control__input" type="radio" id="goal-advice" name="radio-goal" value="advice">
+                  <label class="control" for="goal-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form form__owner-contacts">
+              <legend class="form-title">Контактные данные (владельца кота)</legend>
+              <label class="form__label form__label--required" for="owner-email">E-mail:</label>
+              <input class="field" type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+
+              <label class="form__label form__label--required" for="owner-phone">Телефон:</label>
+              <input class="field" type="text" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+            </fieldset>
+
+            <fieldset class="form form__comment">
+              <legend class="form-title">Комментарий</legend>
+              <input class="field" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
+            </fieldset>
+
+            <fieldset class="form form__extra">
+              <legend class="form-title">Дополнительно</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="control-input" type="checkbox" id="extra-sweetener" name="sweetener" checked>
+                  <label class="control" for="extra-sweetener">сахарозаменитель</label>
+                </li>
+                <li class="form__item">
+                  <input class="control-input" type="checkbox" id="extra-water" name="water">
+                  <label class="control" for="extra-water">питьевая вода</label>
+                </li>
+                <li class="form__item">
+                  <input class="control-input" type="checkbox" id="extra-milk" name="milk">
+                  <label class="control" for="extra-milk">молоко</label>
+                </li>
+                <li class="form__item">
+                  <input class="control-input" type="checkbox" id="extra-vitamins" name="vitamins">
+                  <label class="control" for="extra-vitamins">витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button" type="submit">отправить заявку</button>
+          </form>
+          <small class="program-selection__legend">* — Обязательные поля</small>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -122,15 +130,15 @@
       <div class="page-footer__contacts">
         <img class="contacts__logo" src="../source/img/logo-text.svg" width="128" height="24" alt="Питание для котов Кэт Энерджи.">
         <h4 class="visually-hidden">Социальные сети</h4>
-        <ul class="contacts__social--list">
-          <li class="contacts__social--item">
-            <a class="contacts__social--link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
           </li>
-          <li class="contacts__social--item">
-            <a class="contacts__social--link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
           </li>
-          <li class="contacts__social--item">
-            <a class="contacts__social--link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Фейсбук</a>
           </li>
         </ul>
       </div>
