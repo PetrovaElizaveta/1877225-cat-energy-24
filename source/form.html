@@ -7,10 +7,10 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="../source/img/main-logo-mobile.svg" width="33.32px" height="37.61px" alt="">
+        <img src="../source/img/main-logo-mobile.svg" width="33.32" height="37.61" alt="">
       </a>
       <a class="page-header__text-logo">
-        <img src="../source/img/logo-text.svg" width="101px" height="18px" alt="Питание для котов Кэт Энерджи.">
+        <img src="../source/img/logo-text.svg" width="101" height="18" alt="Питание для котов Кэт Энерджи.">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -38,22 +38,22 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="main-content">
-        <div class="main-content__form--program">
-          <h1>Подбор программы</h1>
-          <p>Заполните анкету, и мы подберем<br>
+      <section class="form-content">
+        <h1>Подбор программы</h1>
+        <p class="form__description">Заполните анкету, и мы подберем<br>
             программу питания для вашего кота</p>
-          <div class="form__data--cat">
-            <h2 class="visually-hidden">Данные питомца</h2>
+        <form class="main-content__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="main-content__form--data">
+            <legend class="visually-hidden">Данные питомца</legend>
             <label class="form__label form-required" for="cat-name">ИМЯ:</label>
             <input class="field" type="text" id="cat-name" name="cat-name" placeholder="барсик" required>
             <label class="form__label form-required" for="cat-weight">Вес (кг):</label>
             <input class="field" type="number" id="cat-weight" name="cat-weight" placeholder="7" required>
             <label class="form__label" for="cat-age">Возраст (лет):</label>
             <input class="field" type="number" id="cat-age" name="cat-age" placeholder="7">
-          </div>
-          <div class="form__goal">
-            <h2 class="visually-hidden">Цель диеты</h2>
+          </fieldset>
+          <fieldset class="form__goal">
+            <legend class="visually-hidden">Цель диеты</legend>
             <ul class="form__goal--list">
               <li class="form__goal--item">
                 <input class="control__input" type="radio" id="goal-slimming" name="radio-goal" value="slimming" checked>
@@ -68,43 +68,43 @@
                 <label class="control" for="goal-advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="main-content__form--owner-contacts">
-          <h2>Контактные данные
-            (владельца кота)</h2>
-          <label class="form__label form-required" for="owner-email">E-mail:</label>
-          <input class="field" type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
-          <label class="form__label form-required" for="owner-phone">Телефон:</label>
-          <input class="field" type="text" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
-        </div>
-        <div class="main-content__form--comment">
-          <h2>Комментарий</h2>
-          <input class="field" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
-        </div>
-        <div class="main-content__form--extra">
-          <h2>Дополнительно</h2>
-          <ul class="form__extra--list">
-            <li class="form__extra--item">
-              <input class="control__input" type="checkbox" id="extra-sweetener" name="sweetener" checked>
-              <label class="control" for="extra-sweetener">сахарозаменитель</label>
-            </li>
-            <li class="form__extra--item">
-              <input class="control__input" type="checkbox" id="extra-water" name="water">
-              <label class="control" for="extra-water">питьевая вода</label>
-            </li>
-            <li class="form__extra--item">
-              <input class="control__input" type="checkbox" id="extra-milk" name="milk">
-              <label class="control" for="extra-milk">молоко</label>
-            </li>
-            <li class="form__extra--item">
-              <input class="control__input" type="checkbox" id="extra-vitamins" name="vitamins">
-              <label class="control" for="extra-vitamins">витамины</label>
-            </li>
-          </ul>
+          </fieldset>
+          <fieldset class="main-content__form--owner-contacts">
+            <legend class="form-title">Контактные данные
+              (владельца кота)</legend>
+            <label class="form__label form-required" for="owner-email">E-mail:</label>
+            <input class="field" type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+            <label class="form__label form-required" for="owner-phone">Телефон:</label>
+            <input class="field" type="text" id="owner-phone" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+          </fieldset>
+          <fieldset class="main-content__form--comment">
+            <legend class="form-title">Комментарий</legend>
+            <input class="field" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
+          </fieldset>
+          <fieldset class="main-content__form--extra">
+            <legend class="form-title">Дополнительно</legend>
+            <ul class="form__extra--list">
+              <li class="form__extra--item">
+                <input class="control__input" type="checkbox" id="extra-sweetener" name="sweetener" checked>
+                <label class="control" for="extra-sweetener">сахарозаменитель</label>
+              </li>
+              <li class="form__extra--item">
+                <input class="control__input" type="checkbox" id="extra-water" name="water">
+                <label class="control" for="extra-water">питьевая вода</label>
+              </li>
+              <li class="form__extra--item">
+                <input class="control__input" type="checkbox" id="extra-milk" name="milk">
+                <label class="control" for="extra-milk">молоко</label>
+              </li>
+              <li class="form__extra--item">
+                <input class="control__input" type="checkbox" id="extra-vitamins" name="vitamins">
+                <label class="control" for="extra-vitamins">витамины</label>
+              </li>
+            </ul>
+          </fieldset>
           <button class="button" type="submit">отправить заявку</button>
-        </div>
-        <span class="main-content__legend">* — Обязательные поля</span>
+        </form>
+        <small class="main-content__legend">* — Обязательные поля</small>
       </section>
     </main>
     <footer class="page-footer">
@@ -117,10 +117,10 @@
             Конюшенная, д. 19/8<br>
             Санкт-Петербург</address>
         </div>
-        <img src="../source/img/map.jpg" width="320px" height="362px" alt="">
+        <img src="../source/img/map.jpg" width="320" height="362" alt="">
       </div>
       <div class="page-footer__contacts">
-        <img class="contacts__logo" src="../source/img/logo-text.svg" width="128px" height="24px" alt="Питание для котов Кэт Энерджи.">
+        <img class="contacts__logo" src="../source/img/logo-text.svg" width="128" height="24" alt="Питание для котов Кэт Энерджи.">
         <h4 class="visually-hidden">Социальные сети</h4>
         <ul class="contacts__social--list">
           <li class="contacts__social--item">
