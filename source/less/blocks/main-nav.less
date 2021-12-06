@@ -1,0 +1,33 @@
+/* Для отображения меню указать display: block; */
+.main-nav {
+  position: relative;
+  display: none;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__item {
+  text-align: center;
+  border-top: 1px solid rgba(230, 230, 230, 1);
+}
+
+.site-list__link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+  display: block;
+  padding: 22px 0 24px;
+}
