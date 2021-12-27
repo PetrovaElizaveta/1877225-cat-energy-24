@@ -1,6 +1,5 @@
 /* Для отображения меню указать display: block; */
 .main-nav {
-  position: relative;
   display: block;
 }
 
@@ -9,6 +8,8 @@
   z-index: 2;
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
+  top: 65px;
+  left: 0;
 }
 
 .main-nav__list {
@@ -30,4 +31,63 @@
   color: rgba(0, 0, 0, 1);
   display: block;
   padding: 22px 0 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: block;
+    margin-left: auto;
+    margin-top: 42px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    position: static;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .site-list__item {
+    border: 0;
+    padding-right: 35px;
+  }
+
+  .site-list__item:last-child {
+    padding-right: 0;
+  }
+
+  .site-list__link {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin-top: 0;
+    height: 694px;
+    background-image: url("../img/index-background-cat-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -30px;
+  }
+
+  .main-nav__list {
+    background-color: rgba(104, 183, 56, 0.85);
+    padding: 69px 110px 567px 130.5px;
+  }
+
+  .main-nav__wrapper {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .site-list__link {
+    line-height: 29.64px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 1);
+  }
 }
