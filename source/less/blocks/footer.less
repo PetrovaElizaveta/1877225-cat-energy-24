@@ -1,9 +1,17 @@
 .cooperation__wrapper {
+  width: 280px;
+  margin: 0 auto;
   padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cooperation__wrapper--form,
 .cooperation__wrapper--catalog {
+  width: 280px;
+}
+
+.page-footer--catalog {
   background-color: rgba(242, 242, 242, 1);
 }
 
@@ -16,6 +24,7 @@
 }
 
 .cooperation__adress {
+  font-family: "Arial", sans-serif;
   line-height: 20px;
   color: rgba(68, 68, 68, 1);
 }
@@ -28,17 +37,10 @@
   display: block;
   width: 100%;
   height: 362px;
-  background-image: url("../img/footer-map.jpg");
+  background-image: url("../img/footer-map.png");
   background-repeat: no-repeat;
-}
-
-.location__icon {
-  width: 57px;
-  height: 53px;
-  background-image: url("../img/map-icon.png");
-  position: absolute;
-  top: 139px;
-  left: 134px;
+  background-size: 100%;
+  background-position: center;
 }
 
 .page-footer__social {
@@ -47,20 +49,49 @@
 }
 
 .page-footer__logo {
-  padding: 0 76px 32px;
+  width: 100%;
+  height: 24px;
+  margin: 0 auto;
+  padding: 0 0 32px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
 }
 
 .social {
   list-style-type: none;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding: 20px 0 21px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.social__icon--vk {
+  width: 23px;
+  height: 16px;
+}
+
+.social__icon--instagram {
+  width: 16px;
+  height: 16px;
+}
+
+.social__icon--facebook {
+  width: 22px;
+  height: 22px;
 }
 
 .page-footer__copyright {
-  padding-top: 28px;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .copyright__link {
@@ -73,7 +104,9 @@
 @media (min-width: @tablet-width) {
   .cooperation__wrapper {
     height: 199px;
-    padding: 0 70px;
+    width: 628px;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,42 +129,81 @@
     margin-top: 16px;
   }
 
+  .location {
+    width: 100%;
+  }
+
   .location__map {
+    width: 100%;
     height: 400px;
-    background-image: url("../img/footer-map-tablet.jpg");
+    background-image: url("../img/footer-map-tablet.png");
+    background-size: 100%;
+    background-position: center;
   }
 
   .location__icon {
-    width: 113px;
-    height: 106px;
-    top: 146px;
-    left: 333px;
-    background-size: 100%;
+    display: none;
   }
 
   .page-footer__social {
+    height: 147px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 30px;
   }
 
   .page-footer__logo {
+    width: auto;
     border: none;
     padding: 0;
+    margin: 0;
   }
 
   .social {
     border: none;
     padding: 0;
   }
+
+  .social__icon--vk {
+    width: 30px;
+    height: 22px;
+  }
+
+  .social__icon--instagram {
+    width: 23px;
+    height: 23px;
+  }
+
+  .social__icon--facebook {
+    width: 28px;
+    height: 33px;
+  }
+
+  .page-footer__copyright {
+    width: auto;
+    padding-top: 0;
+    margin: 0;
+    justify-content: end;
+  }
+
+  .copyright__link {
+    margin-right: 22px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    background-color: rgba(242, 242, 242, 1);
+  }
+
   .page-footer__cooperation {
     position: relative;
   }
 
   .cooperation__wrapper {
+    width: 405px;
     height: auto;
     padding: 56px 80px;
     position: absolute;
@@ -139,26 +211,27 @@
     left: 110px;
     z-index: 2;
     background-color: rgba(255, 255, 255, 1);
-    width: 25%;
   }
 
   .cooperation__adress {
     text-align: left;
+    margin-left: 87px;
   }
 
   .location__map {
     height: 400px;
-    background-image: url("../img/footer-map-desktop.jpg");
+    background-image: url("../img/footer-map-desktop.png");
+    width: 100%;
+    background-size: 100%;
   }
 
   .location__icon {
-    width: 113px;
-    height: 106px;
-    top: 131px;
-    left: 908px;
+    display: none;
   }
 
   .page-footer__social {
+    width: 1220px;
+    margin: 0 auto;
     padding: 0 110px;
     height: 149px;
     align-items: center;

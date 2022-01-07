@@ -1,9 +1,33 @@
-/* Для отображения меню указать display: block; */
 .main-nav {
-  display: block;
+  width: 33.32px;
+  padding-right: 20px;
 }
 
+.main-nav__toggle {
+  margin-right: 20px;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 30px;
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  right: 0;
+  box-shadow: 0 8px 0 0 rgb(0, 0, 0), 0 16px 0 0 rgb(0, 0, 0);
+}
+
+/* Для отображения меню указать display: block; */
 .main-nav__wrapper {
+  display: none;
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -35,9 +59,11 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    display: block;
+    width: auto;
+    display: flex;
     margin-left: auto;
     margin-top: 42px;
+    padding: 0;
   }
 
   .main-nav__toggle {
@@ -46,10 +72,14 @@
 
   .main-nav__wrapper {
     position: static;
+    display: block;
+    width: 100%;
   }
 
   .main-nav__list {
     display: flex;
+    justify-content: space-between;
+    width: 440px;
   }
 
   .site-list__item {
@@ -62,26 +92,28 @@
   }
 
   .site-list__link {
-    padding: 0;
+    padding: 0 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .site-list__link--checked {
+    border-bottom: 2px solid rgba(104, 183, 56, 1);
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    margin-top: 0;
-    height: 694px;
-    background-image: url("../img/index-background-cat-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 -30px;
-  }
-
-  .main-nav__list {
-    background-color: rgba(104, 183, 56, 0.85);
-    padding: 69px 110px 567px 130.5px;
+    margin-top: 69px;
+    margin-right: 0;
   }
 
   .main-nav__wrapper {
     background-color: rgba(255, 255, 255, 0);
+  }
+
+  .main-nav__list {
+    width: 480px;
   }
 
   .site-list__link {
@@ -89,5 +121,13 @@
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 1);
+  }
+
+  .site-list__link--catalog {
+    color: rgba(17, 17, 17, 1);
+  }
+
+  .site-list__link--checked {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
   }
 }
