@@ -1,5 +1,7 @@
 .series__wrapper {
   padding: 0 20px;
+  margin: 0 auto;
+  width: 280px;
 }
 
 .series__list {
@@ -49,23 +51,48 @@
 
 .series__link {
   display: block;
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: rgb(1, 1, 1);
-  padding-top: 19px;
+  margin-top: 19px;
   padding-bottom: 22px;
+}
+
+.series__link::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 102px;
+  background-image: url("../img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 12px;
 }
 
 @media (min-width: @tablet-width) {
   .series__wrapper {
     padding: 0 30px;
-    margin-bottom: 45px;
+    margin: 0 auto 45px;
+    width: 708px;
   }
 
   .series__item {
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 77px 62px 57px 53px;
+  }
+
+  .series__item--slim {
+    background-position: 446px 81px;
+    background-size: 200px 211px;
+  }
+
+  .series__item--pro {
+    background-position: 412px 91px;
+    background-size: 268px 200px;
   }
 
   .series__title {
@@ -87,12 +114,22 @@
     line-height: 29.64px;
     padding: 0;
   }
+
+  .series__link::after {
+    top: 8px;
+    left: 132px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 12px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .series__wrapper {
     padding: 0 110px;
-    margin-bottom: 71px;
+    margin: 0 auto 71px auto;
+    width: 1220px;
   }
 
   .series__list {
@@ -102,10 +139,32 @@
   .series__item {
     margin-right: 80px;
     margin-bottom: 0;
+    padding: 77px 51px 59px 52px;
     width: 100%;
   }
 
   .series__item:last-child {
     margin-right: 0;
+  }
+
+  .series__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .series__description {
+    width: 100%;
+    margin-bottom: 27px;
+    padding: 0;
+  }
+
+  .series__item--slim {
+    background-position: 52px 41px;
+    background-size: 100px 106px;
+  }
+
+  .series__item--pro {
+    background-position: 33px 47px;
+    background-size: 134px 100px;
   }
 }

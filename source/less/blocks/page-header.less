@@ -1,11 +1,10 @@
 .page-header {
+  width: 100%;
+  margin: 0;
   padding: 11px 0 17.39px;
   display: flex;
   position: relative;
-}
-
-.main-logo {
-  display: flex;
+  justify-content: space-between;
 }
 
 .page-header__logo {
@@ -17,6 +16,10 @@
   height: 37.61px;
 }
 
+.page-header__text-logo {
+  padding-top: 13px;
+}
+
 .form-header,
 .catalog-header {
   border-bottom: 1px solid rgba(217, 217, 217, 1);
@@ -25,9 +28,14 @@
 @media (min-width: @tablet-width) {
   .page-header {
     height: 75px;
-    display: flex;
     padding: 0;
-    margin: 0 30px;
+    margin: 0 auto;
+    width: 708px;
+  }
+
+  .form-header,
+  .catalog-header {
+    border-bottom: none;
   }
 
   .page-header__logo {
@@ -44,13 +52,30 @@
 }
 
 @media (min-width: @desktop-width) {
+  body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    background-image: url("../img/index-background-cat-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-x: right;
+    width: 50%;
+    height: 697px;
+  }
+
   .page-header {
-    margin: 0 0 0 110px;
+    margin: 0 auto;
     height: 112px;
+    width: 1220px;
   }
 
   .main-logo {
     height: 112px;
+    margin-left: 0;
   }
 
   .page-header__logo {

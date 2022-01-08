@@ -1,9 +1,14 @@
+.catalog {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .catalog__main-title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 0;
-  padding: 27px 20px 41px;
+  margin: 27px 20px 41px;
+  padding: 0;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
 }
 
@@ -17,6 +22,9 @@
   padding: 19px 20px 25px;
   margin: 0;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
+  display: grid;
+  grid-template-areas: "img title" "img description" "button button";
+  grid-template-columns: 1fr 1fr;
 }
 
 .catalog__title {
@@ -24,8 +32,15 @@
   line-height: 20px;
   font-weight: 400;
   color: rgba(34, 34, 34, 1);
+  width: 76px;
   margin: 0;
   text-transform: uppercase;
+  grid-area: title;
+}
+
+.catalog__img {
+  grid-area: img;
+  margin: 14px auto 3px;
 }
 
 .catalog__description-list {
@@ -33,16 +48,49 @@
   font-size: 12px;
   line-height: 16px;
   color: rgba(68, 68, 68, 1);
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog__description-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__description-value {
+  text-align: center;
 }
 
 .catalog__button {
   width: 100%;
   padding: 10px 0;
+  margin-top: 22px;
+  grid-area: button;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .more {
-  padding: 25px 20px;
+  padding: 75px 20px 25px;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
+  text-align: center;
+  position: relative;
+  display: block;
+}
+
+.more::before,
+.more::after {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 145px;
+  width: 30px;
+  border: 1px solid rgba(211, 211, 211, 1);
+}
+
+.more::after {
+  transform: rotate(90deg);
 }
 
 .more__title {
@@ -51,6 +99,7 @@
   font-weight: 400;
   color: rgba(17, 17, 17, 1);
   text-transform: uppercase;
+  margin: 0 0 8px;
 }
 
 .more__description {
@@ -58,6 +107,7 @@
   font-size: 12px;
   line-height: 16px;
   color: rgba(68, 68, 68, 1);
+  margin: 0 0 21px;
 }
 
 .more__button {
@@ -65,4 +115,164 @@
   background-color: rgba(242, 242, 242, 1);
   padding: 10px 0;
   color: rgba(68, 68, 68, 1);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: 708px;
+  }
+
+  .catalog__main-title {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 65px 0 163px;
+    border-bottom: none;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    width: 248px;
+    height: 352px;
+    margin: 0 60px 141px 0;
+    padding: 39px 37px 39px 39px;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(242, 242, 242, 1);
+    align-items: center;
+    justify-content: end;
+    position: relative;
+  }
+
+  .catalog__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .catalog__item:nth-last-child(-n+2) {
+    margin-bottom: 68px;
+  }
+
+  .catalog__title {
+    font-size: 20px;
+    line-height: 24px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20.85px;
+  }
+
+  .catalog__img {
+    position: absolute;
+    bottom: 303px;
+    order: -1;
+    width: 10.5em;
+  }
+
+  .catalog__description-list {
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalog__description-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0 9px;
+    border-bottom: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  .catalog__button {
+    margin-top: 33px;
+  }
+
+  .more {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 0 2px rgba(242, 242, 242, 1);
+    text-align: center;
+    position: relative;
+  }
+
+  .more::before,
+  .more::after {
+    top: 82px;
+    left: 132px;
+    width: 60px;
+  }
+
+  .more::after {
+    transform: rotate(90deg);
+  }
+
+  .more__title {
+    width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0 0 23px;
+  }
+
+  .more__description {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 87px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-page::before {
+    display: none;
+  }
+
+  .catalog {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .catalog__list {
+    margin: 0 110px;
+  }
+
+  .catalog__main-title {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 74px 110px 165px;
+    border-bottom: none;
+  }
+
+  .catalog__item {
+    width: 168px;
+    height: 351px;
+    margin: 0 80px 143px 0;
+    padding: 40px 38px 40px 39px;
+  }
+
+  .catalog__item:nth-child(2n) {
+    margin-right: 80px;
+  }
+
+  .catalog__item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .catalog__item:nth-last-child(-n+4) {
+    margin-bottom: 75px;
+  }
+
+  .catalog__title {
+    line-height: 21px;
+    width: 145px;
+  }
+
+  .more::before,
+  .more::after {
+    top: 81px;
+    left: 92px;
+  }
 }
