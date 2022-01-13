@@ -31,7 +31,7 @@
 }
 
 .form-pet,
-.form__goal {
+.form-goal {
   border-bottom: 1px solid rgba(217, 217, 217, 1);
 }
 
@@ -56,7 +56,6 @@
   text-transform: uppercase;
   border: 1px solid rgba(231, 231, 231, 1);
   padding: 13.2px 15.12px;
-  margin-bottom: 14px;
   flex-grow: 1;
 }
 
@@ -68,7 +67,35 @@
   margin-bottom: 0;
 }
 
-.form__goal {
+.form__field:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+}
+
+.form__field:invalid {
+  box-shadow: inset 0 0 0 2px rgba(255, 130, 130, 1);
+}
+
+.form__field:focus {
+  box-shadow: inset 0 0 0 2px rgba(68, 68, 68, 1);
+}
+
+.form__field-icon {
+  position: absolute;
+}
+
+.form__field-icon--email {
+  top: 16.05px;
+  right: 15px;
+  stroke: rgba(34, 34, 34, 1);
+}
+
+.form__field-icon--phone {
+  top: 13.04px;
+  right: 13px;
+  fill: rgba(34, 34, 34, 1);
+}
+
+.form-goal {
   padding-bottom: 24px;
 }
 
@@ -83,26 +110,32 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__item--extra {
+  margin-bottom: 13px;
 }
 
 .form__item:last-child {
   margin-bottom: 0;
 }
 
-.control__input {
+.form__control-input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.control__input + label {
+.form__control-input + label {
   display: inline-flex;
   align-items: center;
 }
 
-.control__input + label::before {
+.form__control-input + label::before {
   content: "";
   display: inline-block;
   width: 30px;
@@ -112,7 +145,7 @@
   margin-right: 15px;
 }
 
-.control__input:checked + label::after {
+.form__control-input:checked + label::after {
   content: "";
   position: absolute;
   top: 8.5px;
@@ -123,14 +156,14 @@
   background-color: rgba(104, 183, 56, 1);
 }
 
-.form__owner-contacts {
+.form-owner-contacts {
   margin: 26px 0 23.57px;
   width: 100%;
   position: relative;
   padding: 0;
 }
 
-.form__owner-contacts::after {
+.form-owner-contacts::after {
   content: "";
   position: absolute;
   width: 50%;
@@ -141,7 +174,7 @@
   z-index: -1;
 }
 
-.form__owner-contacts-wrapper {
+.form-owner-contacts-wrapper {
   width: 280px;
   margin: 0 auto;
   padding: 0;
@@ -159,7 +192,7 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.form__comment {
+.form-comment {
   margin: 0 0 22.75px;
 }
 
@@ -177,7 +210,7 @@
   align-items: center;
 }
 
-.form__owner-contacts .form__field {
+.form-owner-contacts .form__field {
   border: 1px solid rgba(205, 205, 205, 1);
 }
 
@@ -190,11 +223,11 @@
   font-size: 16px;
 }
 
-.form__extra {
+.form-extra {
   padding-bottom: 34px;
 }
 
-.form__extra .form__list {
+.form-extra .form__list {
   padding: 0;
 }
 
@@ -203,11 +236,11 @@
   padding-bottom: 34px;
 }
 
-.control__input--checkbox + label::before {
+.form__control-input--checkbox + label::before {
   border-radius: 0;
 }
 
-.control__input--checkbox:checked + label::after {
+.form__control-input--checkbox:checked + label::after {
   content: "";
   background: url("../img/checkbox-mark.svg") center no-repeat rgba(255, 255, 255, 1);
   width: 20px;
@@ -217,7 +250,7 @@
   border-radius: 0;
 }
 
-.form__button {
+.form-button {
   width: 280px;
   padding: 7px 0;
   margin: 0 auto 21px;
@@ -261,7 +294,7 @@
   }
 
   .form-pet,
-  .form__goal {
+  .form-goal {
     border-bottom: none;
   }
 
@@ -281,7 +314,17 @@
     padding: 10.4px 18.68px;
   }
 
-  .form__goal {
+  .form__field-icon--email {
+    top: 19px;
+    right: 19px;
+  }
+
+  .form__field-icon--phone {
+    top: 16px;
+    right: 17px;
+  }
+
+  .form-goal {
     padding-bottom: 75px;
   }
 
@@ -294,6 +337,7 @@
 
   .form__list--owner {
     border: none;
+    padding: 0;
   }
 
   .form__item {
@@ -301,13 +345,13 @@
     line-height: 29.64px;
   }
 
-  .control__input + label::before {
+  .form__control-input + label::before {
     width: 38px;
     height: 38px;
     margin-right: 20px;
   }
 
-  .control__input:checked + label::after {
+  .form__control-input:checked + label::after {
     content: "";
     position: absolute;
     top: 11px;
@@ -316,18 +360,18 @@
     height: 18px;
   }
 
-  .form__owner-contacts {
+  .form-owner-contacts {
     margin: 0 auto 65px;
     padding: 0;
     width: 100%;
   }
 
-  .form__owner-contacts::after {
+  .form-owner-contacts::after {
     width: 100%;
     top: 22px;
   }
 
-  .form__owner-contacts-wrapper {
+  .form-owner-contacts-wrapper {
     width: 768px;
     margin: 0 auto;
   }
@@ -340,7 +384,7 @@
     width: 512px;
   }
 
-  .form__comment {
+  .form-comment {
     margin-bottom: 65px;
   }
 
@@ -358,7 +402,7 @@
     line-height: 30px;
   }
 
-  .form__extra {
+  .form-extra {
     margin-bottom: 54px;
     padding: 0;
   }
@@ -386,14 +430,14 @@
     margin-bottom: 0;
   }
 
-  .form__button--wrapper {
+  .form-button-wrapper {
     display: flex;
     align-items: center;
     width: 630px;
     margin: 0 auto;
   }
 
-  .control__input--checkbox:checked + label::after {
+  .form__control-input--checkbox:checked + label::after {
     width: 30px;
     height: 30px;
     background-size: 25px 25px;
@@ -401,7 +445,7 @@
     top: 5px;
   }
 
-  .form__button {
+  .form-button {
     width: 282px;
     padding: 13px 0;
     margin: 0;
@@ -438,7 +482,7 @@
     margin-bottom: 0;
   }
 
-  .form-cat__wrapper {
+  .program-selection__form-cat-wrapper {
     width: 1220px;
     margin: 0 auto;
     display: flex;
@@ -454,7 +498,16 @@
     margin-right: 13px;
   }
 
-  .form__goal {
+  .form__field-icon--email {
+    right: 19.72px;
+  }
+
+  .form__field-icon--phone {
+    top: 15px;
+    right: 17.23px;
+  }
+
+  .form-goal {
     margin: 0;
   }
 
@@ -468,11 +521,11 @@
     margin-bottom: 7px;
   }
 
-  .form__owner-contacts {
+  .form-owner-contacts {
     width: 100%;
   }
 
-  .form__owner-contacts-wrapper {
+  .form-owner-contacts-wrapper {
     width: 1440px;
     margin: 0 auto;
   }
@@ -495,7 +548,7 @@
     margin: 0;
   }
 
-  .form__comment {
+  .form-comment {
     margin-bottom: 67px;
   }
 
@@ -503,7 +556,7 @@
     width: 1220px;
   }
 
-  .form__extra {
+  .form-extra {
     margin-bottom: 61px;
   }
 
@@ -523,11 +576,11 @@
     margin: 0;
   }
 
-  .form__button--wrapper {
+  .form-button-wrapper {
     width: 1220px;
   }
 
-  .form__button {
+  .form-button {
     width: 568px;
   }
 

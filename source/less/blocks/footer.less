@@ -1,4 +1,4 @@
-.cooperation__wrapper {
+.cooperation__adress-block {
   width: 280px;
   margin: 0 auto;
   padding: 26px 20px;
@@ -33,14 +33,15 @@
   position: relative;
 }
 
-.location__map {
+.location__map-wrapper {
   display: block;
   width: 100%;
   height: 362px;
-  background-image: url("../img/footer-map.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+}
+
+.location__map {
+  height: 362px;
+  width: 100%;
 }
 
 .page-footer__social {
@@ -54,6 +55,14 @@
   margin: 0 auto;
   padding: 0 0 32px;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+
+.page-footer__logo:hover {
+  opacity: 0.8;
+}
+
+.page-footer__logo:active {
+  opacity: 0.6;
 }
 
 .social {
@@ -70,6 +79,18 @@
   margin-right: 36px;
 }
 
+.social__icon {
+  fill: rgba(102, 102, 102, 1);
+}
+
+.social__icon:hover {
+  fill: rgba(104, 183, 56, 1);
+}
+
+.social__icon:active {
+  opacity: 0.3;
+}
+
 .social__icon--vk {
   width: 23px;
   height: 16px;
@@ -83,6 +104,11 @@
 .social__icon--facebook {
   width: 22px;
   height: 22px;
+  stroke: rgba(102, 102, 102, 1);
+}
+
+.social__icon--facebook:hover {
+  stroke: rgba(104, 183, 56, 1);
 }
 
 .page-footer__copyright {
@@ -101,8 +127,20 @@
   color: rgba(68, 68, 68, 1);
 }
 
+.copyright__academy-logo {
+  fill: rgba(102, 102, 102, 1);
+}
+
+.page-footer__copyright:hover .copyright__academy-logo {
+  fill: rgba(104, 183, 56, 1);
+}
+
+.page-footer__copyright:active {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
-  .cooperation__wrapper {
+  .cooperation__adress-block {
     height: 199px;
     width: 628px;
     padding: 0;
@@ -133,16 +171,13 @@
     width: 100%;
   }
 
-  .location__map {
+  .location__map-wrapper {
     width: 100%;
     height: 400px;
-    background-image: url("../img/footer-map-tablet.png");
-    background-size: 100%;
-    background-position: center;
   }
 
-  .location__icon {
-    display: none;
+  .location__map {
+    height: 400px;
   }
 
   .page-footer__social {
@@ -189,7 +224,7 @@
   }
 
   .copyright__link {
-    margin-right: 22px;
+    padding-right: 22px;
   }
 }
 
@@ -198,17 +233,20 @@
     background-color: rgba(242, 242, 242, 1);
   }
 
-  .page-footer__cooperation {
+  .cooperation__wrapper,
+  .cooperation__wrapper--catalog {
     position: relative;
+    width: 1220px;
+    margin: 0 auto;
   }
 
-  .cooperation__wrapper {
+  .cooperation__adress-block {
     width: 405px;
     height: auto;
     padding: 56px 80px;
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: 0;
     z-index: 2;
     background-color: rgba(255, 255, 255, 1);
   }
@@ -216,17 +254,6 @@
   .cooperation__adress {
     text-align: left;
     margin-left: 87px;
-  }
-
-  .location__map {
-    height: 400px;
-    background-image: url("../img/footer-map-desktop.png");
-    width: 100%;
-    background-size: 100%;
-  }
-
-  .location__icon {
-    display: none;
   }
 
   .page-footer__social {
