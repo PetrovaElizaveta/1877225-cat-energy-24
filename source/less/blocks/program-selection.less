@@ -89,10 +89,26 @@
   stroke: rgba(34, 34, 34, 1);
 }
 
+.form__field:invalid + .form__field-icon--email {
+  stroke: rgba(255, 130, 130, 1);
+}
+
+.form__field:focus + .form__field-icon--email {
+  stroke: rgba(104, 183, 56, 1);
+}
+
 .form__field-icon--phone {
   top: 13.04px;
   right: 13px;
   fill: rgba(34, 34, 34, 1);
+}
+
+.form__field:invalid + .form__field-icon--phone {
+  fill: rgba(255, 130, 130, 1);
+}
+
+.form__field:focus + .form__field-icon--phone {
+  fill: rgba(104, 183, 56, 1);
 }
 
 .form-goal {
@@ -185,6 +201,7 @@
 .form__title {
   font-size: 24px;
   line-height: 26px;
+  margin: 0;
   padding: 0 14px 35px 0;
   position: relative;
   display: block;
@@ -513,12 +530,12 @@
 
   .form__list {
     width: 512px;
-    padding: 21px 28px;
+    padding: 25px 28px;
     border: 1px solid rgba(231, 231, 231, 1);
   }
 
   .form__item {
-    margin-bottom: 7px;
+    margin-bottom: 12px;
   }
 
   .form-owner-contacts {

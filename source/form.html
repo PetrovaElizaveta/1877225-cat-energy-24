@@ -12,7 +12,7 @@
       <a class="page-header__text-logo link" href="./index.html">
         <img src="./img/logo-text.svg" width="101" height="18" alt="Питание для котов Кэт Энерджи.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -39,6 +39,22 @@
         </div>
       </nav>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
     <main class="page-main">
       <section class="program-selection">
         <div class="program-selection__wrapper">
