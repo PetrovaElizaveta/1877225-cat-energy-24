@@ -9,7 +9,6 @@
   font-weight: 400;
   margin: 27px 20px 41px;
   padding: 0;
-  border-bottom: 1px solid rgba(235, 235, 235, 1);
 }
 
 .catalog__list {
@@ -25,6 +24,10 @@
   display: grid;
   grid-template-areas: "img title" "img description" "button button";
   grid-template-columns: 1fr 1fr;
+}
+
+.catalog__item:first-child {
+  border-top: 1px solid rgba(235, 235, 235, 1);
 }
 
 .catalog__title {

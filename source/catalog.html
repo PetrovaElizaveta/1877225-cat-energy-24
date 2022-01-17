@@ -12,7 +12,7 @@
       <a class="page-header__text-logo link" href="./index.html">
         <img src="./img/logo-text.svg" width="101" height="18" alt="Питание для котов Кэт Энерджи.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -39,6 +39,22 @@
         </div>
       </nav>
     </header>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
     <main class="page-main">
       <section class="catalog">
         <h1 class="catalog__main-title">Каталог продукции</h1>
@@ -190,36 +206,36 @@
         </div>
         <ul class="catalog-extra__list">
           <li class="catalog-extra__item">
-            <h3 class="catalog__title catalog-extra__title">Сахарозаменитель</h3>
+            <h3 class="catalog-extra__title">Сахарозаменитель</h3>
             <div class="catalog-extra__description-wrapper">
               <p class="catalog-extra__description">1 упаковка (100 г)</p>
               <span class="catalog-extra__price">200 Р.</span>
             </div>
-            <button class="catalog__button button" type="button">заказать</button>
+            <button class="catalog-extra__button button" type="button">заказать</button>
           </li>
           <li class="catalog-extra__item">
-            <h3 class="catalog__title catalog-extra__title">питьевая вода</h3>
+            <h3 class="catalog-extra__title">питьевая вода</h3>
             <div class="catalog-extra__description-wrapper">
               <p class="catalog-extra__description">5 литров</p>
               <span class="catalog-extra__price">50 Р.</span>
             </div>
-            <button class="catalog__button button" type="button">заказать</button>
+            <button class="catalog-extra__button button" type="button">заказать</button>
           </li>
           <li class="catalog-extra__item">
-            <h3 class="catalog__title catalog-extra__title">молоко</h3>
+            <h3 class="catalog-extra__title">молоко</h3>
             <div class="catalog-extra__description-wrapper">
               <p class="catalog-extra__description">1 литр</p>
               <span class="catalog-extra__price">100 Р.</span>
             </div>
-            <button class="catalog__button button" type="button">заказать</button>
+            <button class="catalog-extra__button button" type="button">заказать</button>
           </li>
           <li class="catalog-extra__item">
-            <h3 class="catalog__title catalog-extra__title">витамины</h3>
+            <h3 class="catalog-extra__title">витамины</h3>
             <div class="catalog-extra__description-wrapper">
               <p class="catalog-extra__description">1 упаковка (30 г)</p>
               <span class="catalog-extra__price">300 Р.</span>
             </div>
-            <button class="catalog__button button" type="button">заказать</button>
+            <button class="catalog-extra__button button" type="button">заказать</button>
           </li>
         </ul>
         <aside class="promo">
