@@ -41,7 +41,7 @@
   grid-area: title;
 }
 
-.catalog__img {
+.catalog__img-wrapper {
   grid-area: img;
   margin: 14px auto 3px;
 }
@@ -51,6 +51,7 @@
   font-size: 12px;
   line-height: 16px;
   color: rgba(68, 68, 68, 1);
+  padding: 0;
   grid-area: description;
   display: flex;
   flex-direction: column;
@@ -177,11 +178,14 @@
     margin-bottom: 20.85px;
   }
 
-  .catalog__img {
+  .catalog__img-wrapper {
     position: absolute;
     bottom: 303px;
     order: -1;
-    width: 10.5em;
+  }
+
+  .catalog__img {
+    width: 150px;
   }
 
   .catalog__description-list {
@@ -279,6 +283,10 @@
   .catalog__title {
     line-height: 21px;
     width: 145px;
+  }
+
+  .catalog__img-wrapper {
+    bottom: 311px;
   }
 
   .more::before,

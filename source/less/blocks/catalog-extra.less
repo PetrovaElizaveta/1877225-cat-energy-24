@@ -82,8 +82,13 @@
   padding: 0;
   background-image: url("../img/aside-promo-background.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
   width: 280px;
   height: 290px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/aside-promo-background@2x.jpg");
+  }
 }
 
 .promo__background {
@@ -186,6 +191,10 @@
     background-image: url("../img/aside-promo-background-tablet.jpg");
     width: 707px;
     height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/aside-promo-background-tablet@2x.jpg");
+    }
   }
 
   .promo__background {
@@ -259,6 +268,10 @@
     background-image: url("../img/aside-promo-background-desktop.jpg");
     width: 250px;
     height: 288.77px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/aside-promo-background-desktop@2x.jpg");
+    }
   }
 
   .promo__background {
