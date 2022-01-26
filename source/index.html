@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicons/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <header class="page-header">
@@ -163,7 +167,10 @@
               </div>
               <div class="examples__gallery">
                 <div class="examples__images">
-                  <img src="./img/cat-fat-min.png" height="232" alt="Кот до питания Кэт энерджи.">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/cat-fat.png 1x, ./img/cat-fat@2x.png 2x">
+                    <img class="examples__picture" src="./img/cat-fat-mobile.png" srcset="./img/cat-fat-mobile@2x.png 2x" width="280" height="232" alt="Кот до питания Кэт энерджи.">
+                  </picture>
                 </div>
                 <div class="slider">
                   <span class="slider__title">было</span>
