@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" href="./fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="icon" href="./img/favicons/favicon-32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
@@ -16,7 +16,7 @@
         <a class="page-header__logo" href="index.html"></a>
         <a class="page-header__text-logo" href="index.html">
           <svg width="101" height="18">
-            <use xlink:href="./img/sprite.svg#text-logo"></use>
+            <use xlink:href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -171,8 +171,11 @@
               <div class="examples__gallery">
                 <div class="examples__images">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./img/cat-fat.png 1x, ./img/cat-fat@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="./img/cat_tablet.png 1x, ./img/cat_tablet@2x.png 2x">
                     <img class="examples__picture" src="./img/cat-fat-mobile.png" srcset="./img/cat-fat-mobile@2x.png 2x" width="280" height="232" alt="Кот до питания Кэт энерджи.">
+                  </picture>
+                  <picture>
+                    <img class="examples__picture visually-hidden" src="./img/cat-skinny.png" srcset="./img/cat-skinny@2x.png 2x" width="243" height="232" alt="Кот после питания Кэт энерджи.">
                   </picture>
                 </div>
                 <div class="slider">
@@ -210,7 +213,7 @@
       <div class="page-footer__social">
         <a class="page-footer__link" href="index.html">
           <svg class="page-footer__logo" width="128" height="24">
-            <use xlink:href="./img/sprite.svg#text-logo"></use>
+            <use xlink:href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
         <h4 class="visually-hidden">Социальные сети</h4>
@@ -218,21 +221,21 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte link" title="Вконтакте" href="https://vk.com/htmlacademy">
               <svg class="social__icon social__icon--vk" width="23" height="16">
-                <use xlink:href="./img/sprite.svg#icon-vkontakte"></use>
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram link" title="Инстаграм" href="https://www.instagram.com/htmlacademy">
               <svg class="social__icon social__icon--instagram" width="16" height="16">
-                <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook link" title="Фейсбук" href="https://www.facebook.com/htmlacademy">
               <svg class="social__icon social__icon--facebook" width="22" height="22">
-                <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -241,7 +244,7 @@
           <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__icon link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="copyright__academy-logo" width="27" height="34">
-              <use xlink:href="./img/sprite.svg#logo-html-academy"></use>
+              <use xlink:href="/img/sprite.svg#html-academy-logo"></use>
             </svg>
           </a>
         </div>
