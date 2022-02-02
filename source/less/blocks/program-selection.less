@@ -35,10 +35,14 @@
   border-bottom: 1px solid rgba(217, 217, 217, 1);
 }
 
+.form-pet {
+  padding-bottom: 10px;
+}
+
 .form__wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .form__label {
@@ -126,7 +130,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   position: relative;
   display: flex;
   align-items: center;
@@ -154,8 +158,8 @@
 .form__control-input + label::before {
   content: "";
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: 1px solid rgba(205, 205, 205, 1);
   border-radius: 50%;
   margin-right: 15px;
@@ -164,8 +168,8 @@
 .form__control-input:checked + label::after {
   content: "";
   position: absolute;
-  top: 8.5px;
-  left: 8.5px;
+  top: 8px;
+  left: 8px;
   width: 13.5px;
   height: 13.5px;
   border-radius: 50%;
@@ -234,6 +238,7 @@
 .form__field--comments {
   box-sizing: border-box;
   width: 100%;
+  height: 150px;
   padding-left: 12px;
   padding-top: 9px;
   vertical-align: text-top;
@@ -241,6 +246,7 @@
 }
 
 .form-extra {
+  margin: 0;
   padding-bottom: 34px;
 }
 
@@ -313,6 +319,7 @@
   .form-pet,
   .form-goal {
     border-bottom: none;
+    padding-bottom: 52px;
   }
 
   .form__wrapper {
@@ -342,7 +349,7 @@
   }
 
   .form-goal {
-    padding-bottom: 75px;
+    padding-bottom: 73px;
   }
 
   .form__list {
@@ -355,6 +362,7 @@
   .form__list--owner {
     border: none;
     padding: 0;
+    width: 632px;
   }
 
   .form__item {
@@ -397,7 +405,7 @@
     font-size: 36px;
     line-height: 36px;
     padding: 0 42px 76px 39px;
-    margin-left: 35px;
+    margin-left: 33px;
     width: 512px;
   }
 
@@ -415,6 +423,7 @@
     padding-top: 10px;
     margin: 0 auto;
     width: 631px;
+    height: 172px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -443,7 +452,7 @@
     margin-bottom: 28px;
   }
 
-  .form__item--extra:nth-child(n+2) {
+  .form__item--extra:nth-last-of-type(-n+2) {
     margin-bottom: 0;
   }
 
@@ -508,7 +517,7 @@
   .form {
     width: 570px;
     padding: 0;
-    margin: 0 80px 69px 0;
+    margin: 0 80px 46px 0;
   }
 
   .form__label {
@@ -540,6 +549,7 @@
 
   .form-owner-contacts {
     width: 100%;
+    margin-bottom: 43px;
   }
 
   .form-owner-contacts-wrapper {
@@ -550,7 +560,7 @@
   .form__title {
     padding: 0 40px;
     margin-left: 70px;
-    margin-bottom: 76px;
+    margin-bottom: 50px;
   }
 
   .form__list--owner {

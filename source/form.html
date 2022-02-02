@@ -12,10 +12,12 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="form-page">
-    <header class="page-header catalog-header">
-      <a class="page-header__logo link" href="./index.html"></a>
-      <a class="page-header__text-logo link" href="./index.html">
-        <img src="./img/logo-text.svg" width="101" height="18" alt="Питание для котов Кэт Энерджи.">
+    <header class="page-header form-header">
+      <a class="page-header__logo" href="index.html"></a>
+      <a class="page-header__text-logo" href="index.html">
+        <svg width="101" height="18">
+          <use xlink:href="img/sprite.svg#logo-text"></use>
+        </svg>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">

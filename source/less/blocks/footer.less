@@ -1,7 +1,7 @@
 .cooperation__adress-block {
   width: 280px;
   margin: 0 auto;
-  padding: 26px 20px;
+  padding: 28px 20px 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -49,12 +49,18 @@
   background-color: rgba(242, 242, 242, 1);
 }
 
-.page-footer__logo {
+.page-footer__link {
+  display: block;
   width: 100%;
+  border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+
+.page-footer__logo {
+  display: block;
+  width: 128px;
   height: 24px;
   margin: 0 auto;
   padding: 0 0 32px;
-  border-bottom: 1px solid rgba(217, 217, 217, 1);
 }
 
 .page-footer__logo:hover {
@@ -68,10 +74,15 @@
 .social {
   list-style-type: none;
   margin: 0;
-  padding: 20px 0 21px;
+  padding: 17px 0;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  display: flex;
   align-items: center;
 }
 
@@ -114,7 +125,7 @@
 .page-footer__copyright {
   width: 280px;
   margin: 0 auto;
-  padding-top: 22px;
+  padding-top: 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,7 +185,7 @@
 
   .adress-city {
     display: block;
-    margin-top: 16px;
+    margin-top: 18px;
   }
 
   .location {
@@ -199,6 +210,11 @@
     padding: 0 30px;
   }
 
+  .page-footer__link {
+    width: 128px;
+    border-bottom: none;
+  }
+
   .page-footer__logo {
     width: auto;
     border: none;
@@ -209,6 +225,11 @@
   .social {
     border: none;
     padding: 0;
+    margin-left: 20px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 28px;
   }
 
   .social__icon--vk {
@@ -222,8 +243,8 @@
   }
 
   .social__icon--facebook {
-    width: 28px;
-    height: 33px;
+    width: 17px;
+    height: 27px;
   }
 
   .page-footer__copyright {
