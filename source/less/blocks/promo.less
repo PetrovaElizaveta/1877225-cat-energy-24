@@ -1,0 +1,78 @@
+.promo {
+  margin: 35px auto;
+  padding: 0;
+  background-image: url("../img/aside-promo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgb(105, 183, 56);
+  width: 280px;
+  min-height: 290px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/aside-promo-background@2x.jpg");
+  }
+}
+
+.promo__background {
+  height: 100%;
+  position: relative;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 101px 58.88px;
+  z-index: 3;
+}
+
+.promo__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+  padding-top: 187px;
+  padding-bottom: 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    margin: 69px auto 76px;
+    background-image: url("../img/aside-promo-background-tablet.jpg");
+    width: 707px;
+    min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/aside-promo-background-tablet@2x.jpg");
+    }
+  }
+
+  .promo__background {
+    background-position: 77px 57px;
+  }
+
+  .promo__text {
+    text-align: left;
+    padding: 71px 124px 69px 422px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin: 0 auto 85px 0;
+    background-image: url("../img/aside-promo-background-desktop.jpg");
+    width: 250px;
+    min-height: 289px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/aside-promo-background-desktop@2x.jpg");
+    }
+  }
+
+  .promo__background {
+    background-position: 84px 55.74px;
+  }
+
+  .promo__text {
+    text-align: center;
+    padding: 185px 43px 42px 41px;
+  }
+}
