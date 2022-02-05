@@ -19,6 +19,7 @@
           <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
+      <!--для отображения навигации без js убрать класс main-nav--closed-->
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -67,7 +68,7 @@
         <h1 class="catalog__main-title">Каталог продукции</h1>
         <h2 class="visually-hidden">Каталог функционального питания</h2>
         <ul class="catalog__list">
-          <li class="catalog__item">
+          <li class="catalog__item" id="pro">
             <h3 class="catalog__title">Cat Energy PRO 500 г</h3>
             <div class="catalog__img-wrapper">
               <a href="">
@@ -183,7 +184,7 @@
             </ul>
             <a class="catalog__button button" href="">заказать</a>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item" id="slim">
             <h3 class="catalog__title">Cat Energy slim 500 г</h3>
             <div class="catalog__img-wrapper">
               <a href="">
